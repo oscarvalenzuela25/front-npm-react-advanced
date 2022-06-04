@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductImage Debe mostrar el componente con una img 1`] = `
+<div
+  className="productCard undefined"
+>
+  <h1>
+    Titulo
+  </h1>
+</div>
+`;

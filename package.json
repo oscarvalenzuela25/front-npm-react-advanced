@@ -10,10 +10,21 @@
   "engines": {
     "node": ">=10"
   },
+  "repository": {
+    "url": "https://github.com/oscarvalenzuela25/front-npm-react-advanced",
+    "type": "git"
+  },
+  "keywords": [
+    "product",
+    "card",
+    "ts",
+    "npm-example"
+  ],
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -47,20 +58,32 @@
     }
   ],
   "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
     "@rollup/plugin-image": "^2.1.1",
     "@size-limit/preset-small-lib": "^7.0.8",
+    "@types/jest": "^28.1.0",
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
+    "babel-jest": "^28.1.0",
     "husky": "^8.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^28.1.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-test-renderer": "^18.1.0",
     "rollup-plugin-postcss": "4.0.1",
     "size-limit": "^7.0.8",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.2"
-  },
-  "dependencies": {
+    "typescript": "^4.7.2",
+    "@types/react-test-renderer": "^18.0.0",
     "postcss": "8.1.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
